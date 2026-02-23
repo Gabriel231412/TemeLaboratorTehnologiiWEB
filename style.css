@@ -1,0 +1,318 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0e14;
+    color: #fff;
+    line-height: 1.4;
+}
+
+
+.navbar {
+    background-color: #f38b00;
+    padding: 10px 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.fingerprint-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-logo-img {
+    height: 45px;
+    width: auto; 
+    display: block;
+}
+
+
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #000;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-title {
+    font-weight: 800;
+    font-size: 1.3rem;
+}
+
+.logo-subtitle {
+    font-size: 0.85rem;
+}
+
+.menu-social-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.nav-menu li:first-child a {
+    color: #0000FF; 
+}
+
+.fb-link {
+    background: #3b5998;
+    color: white;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('i3.png'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content p {
+    color: gray;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 10vw, 5.5rem);
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    margin-bottom: 15px;
+    font-size: 1.15rem;
+}
+
+.btn-main {
+    background-color: #f38b00;
+    color: gray;
+    border: none;
+    padding: 14px 40px;
+    font-weight: 800;
+    cursor: pointer;
+    margin-top: 25px;
+    letter-spacing: 1px;
+}
+
+.info-section {
+    background-color: #f38b00;
+    color: #000;
+    padding: 80px 10%;
+}
+
+.info-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.rules-block {
+    text-align: left;
+}
+
+.info-section h3 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    font-weight: 800;
+}
+
+.rules-text p {
+    margin-bottom: 18px;
+    font-size: 1.1rem;
+    max-width: 850px;
+}
+
+.divider {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 50px auto;
+    width: 60%;
+}
+
+.calendar-wrapper {
+    text-align: center;
+}
+
+.calendar-wrapper h4 {
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+
+
+.calendar-list p {
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+  
+  
+ 
+}
+
+.main-footer {
+    background-color: #06090f;
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-credits {
+    color: #4472c4;
+    font-size: 0.9rem;
+}
+
+.uab-img {
+    height: 55px;
+    filter: brightness(0) invert(1);
+}
+
+
+
+.menu-checkbox, .hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    
+    .nav-container {
+        position: relative;
+        flex-direction: row; 
+        justify-content: space-between;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .hamburger span {
+        width: 30px;
+        height: 3px;
+        background-color: #000;
+        border-radius: 2px;
+    }
+
+    .menu-social-wrapper {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #f38b00;
+        padding: 20px;
+        flex-direction: column;
+        border-top: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    
+    .menu-checkbox:checked ~ .menu-social-wrapper {
+        display: flex;
+    }
+
+    .menu-checkbox {
+        display: none;
+    }
+
+    .hero {
+        text-align: center;
+        padding: 0 5%;
+    }
+    .info-section {
+        padding: 40px 5%;
+    }
+    
+    .info-container {
+        width: 100%; 
+    }
+
+    .hero-content p, 
+    .rules-text p {
+        font-size: 1rem;
+        width: 95%;   
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.5;
+    }
+    
+    .hero h1 {
+        font-size: clamp(2rem, 8vw, 3.5rem);
+        line-height: 1.1;
+        width: 90%; 
+        margin: 0 auto 20px auto;
+    }
+    .main-footer {
+        flex-direction: column;
+        gap: 20px;             
+        text-align: center;    
+        padding: 40px 20px;   
+    }
+
+    .footer-credits {
+        order: 1;              
+    }
+
+    .uab-logo {
+        order: 2;            
+        display: flex;
+        justify-content: center;
+    }
+
+    .uab-img {
+        height: 50px;         
+        width: auto;
+    }
+
+}
